@@ -1,0 +1,18 @@
+// Spring Roo 1.1.0.M1 [rev 3a0b8a3] log opened at 2010-07-02 12:49:47
+project --topLevelPackage com.gordo.jmxitems
+persistence setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY 
+entity --class ~.entity.Item
+field string partNumber
+field string descriptions
+field string description
+exit
+// Spring Roo 1.1.0.M1 [rev 3a0b8a3] log closed at 2010-07-02 12:51:24
+// Spring Roo 1.1.0.M1 [rev 3a0b8a3] log opened at 2010-07-02 12:51:50
+entity --class ~.entity.Item
+entity --class ~.entity.Item --testAutomatically 
+class --class ~.service.ItemService
+class --class ~.service.ItemServiceImpl
+controller scaffold --class ~.controller.ItemController
+controller scaffold --class ~.controller.ItemController --entity com.gordo.jmxitems.entity.Item
+controller scaffold --class ~.controller.ItemController --entity com.gordo.jmxitems.entity.Item
+entity --class ~.entity.Item --testAutomatically 
