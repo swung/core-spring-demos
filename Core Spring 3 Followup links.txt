@@ -36,8 +36,8 @@ Maven: http://maven.apache.org/
 My Class Code Demo Repository
 
    * I will be updating this from time to time
-   * You will need to download and install Git from http://github.com
-   * Gordon's Core Class Demos: git clone git@github.com:gordonad/core-spring-demos.git
+   * You will need to download and install Git from:  http://book.git-scm.com/2_installing_git.html
+   * Gordon's Core Class Demos: git clone git://github.com/gordonad/core-spring-demos.git
    
    
 Spring Certification Voucher
