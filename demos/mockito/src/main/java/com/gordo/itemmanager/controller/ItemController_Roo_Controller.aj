@@ -19,7 +19,6 @@ privileged aspect ItemController_Roo_Controller {
     
     @RequestMapping(method = RequestMethod.POST)
     public String ItemController.create(@Valid Item item, BindingResult result, ModelMap modelMap) {
-        if (item == null) throw new IllegalArgumentException("A item is required");
         if (result.hasErrors()) {
             modelMap.addAttribute("item", item);
             return "item/create";
@@ -49,7 +48,6 @@ privileged aspect ItemController_Roo_Controller {
     
     @RequestMapping(method = RequestMethod.PUT)
     public String ItemController.update(@Valid Item item, BindingResult result, ModelMap modelMap) {
-        if (item == null) throw new IllegalArgumentException("A item is required");
         if (result.hasErrors()) {
             modelMap.addAttribute("item", item);
             return "item/update";
@@ -60,7 +58,6 @@ privileged aspect ItemController_Roo_Controller {
     
     @RequestMapping(value = "/{id}", params = "form", method = RequestMethod.GET)
     public String ItemController.updateForm(@PathVariable("id") Long id, ModelMap modelMap) {
-        if (id == null) throw new IllegalArgumentException("An Identifier is required");
         modelMap.addAttribute("item", Item.findItem(id));
         return "item/update";
     }

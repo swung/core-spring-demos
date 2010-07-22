@@ -13,3 +13,4 @@ controller scaffold --class com.gordo.itemmanager.ItemController
 // Spring Roo 1.1.0.M1 [rev 3a0b8a3] log opened at 2010-05-25 17:24:54
 // Spring Roo 1.1.0.M1 [rev 3a0b8a3] log opened at 2010-05-26 10:35:16
 // Spring Roo 1.1.0.M1 [rev 3a0b8a3] log opened at 2010-07-01 17:26:08
+// Spring Roo 1.1.0.M2 [rev 0b3543e] log opened at 2010-07-21 17:36:23

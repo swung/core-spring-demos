@@ -19,7 +19,8 @@
             <spring:message arguments="${entity_label}" code="entity.not.found.single"/>
         </c:if>
     </div>
-<page:show id="ps:com.gordo.itemmanager.entity.Item" object="${item}" z="wuwgoeCUzcV3rDqTnTA8U9d8qXE=">
-        <field:display field="name" id="s:com.gordo.itemmanager.entity.Item.name" object="${item}" z="zPKeV143YBuqzor0e5/1/1J42Fk="/>
+
+<page:show id="ps_com_gordo_itemmanager_entity_Item" object="${item}" z="xYc9rR1GIeUwST87uX7K2v5bN7s=">
+        <field:display field="name" id="s_com_gordo_itemmanager_entity_Item_name" object="${item}" z="/sFtN0Te7yRvTraBaSJtlNE3zls="/>
     </page:show>
 </div>

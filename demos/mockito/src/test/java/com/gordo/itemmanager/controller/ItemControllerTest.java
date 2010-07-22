@@ -3,8 +3,13 @@ package com.gordo.itemmanager.controller;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
+import static org.mockito.Matchers.anyLong;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -60,8 +65,26 @@ public class ItemControllerTest {
 	public void testDeleteItem() throws Exception {
 		String view = itemController.delete(5l, null, null);
 
-		verify(itemService).deleteItem(15l);
+		verify(itemService).deleteItem(5l);
 		assertTrue(view.startsWith("redirect:/item?page="));
+	}
+
+	/**
+	 * Testing behavior of the Mock. Ensure that the number of items request is
+	 * actually invoked.
+	 * 
+	 * @throws Exception
+	 */
+	@Test
+	public void testMultipleDeletesOccur() throws Exception {
+		List<Long> testIds = new ArrayList<Long>();
+		testIds.add(1L);
+		testIds.add(300L);
+		testIds.add(77L);
+		String view = itemController.deleteItems(testIds);
+
+		verify(itemService, times(testIds.size())).deleteItem(anyLong());
+		assertTrue(view.equals("redirect:/item"));
 	}
 
 }

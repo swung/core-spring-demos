@@ -29,7 +29,8 @@
             <form:hidden id="_version_id" path="version"/>
         </form:form>
     </div>
-<form:update id="fu:com.gordo.itemmanager.entity.Item" modelAttribute="item" path="/item" z="37nDAIG6G35DaWZpAMF3n0wvRBQ=">
-        <field:input field="name" id="c:com.gordo.itemmanager.entity.Item.name" z="hOeGId15/bAeAvOC8jNFiYbjQnY="/>
+
+<form:update id="fu_com_gordo_itemmanager_entity_Item" modelAttribute="item" path="/item" z="+eaZLj04k8fzeo48Ksq8NBDZ3i8=">
+        <field:input field="name" id="c_com_gordo_itemmanager_entity_Item_name" z="KPvnJmSBjZ3OK1GA9JdWCFHOrWk="/>
     </form:update>
 </div>

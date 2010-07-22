@@ -77,9 +77,10 @@
             <spring:message arguments="${entity_label_plural}" code="entity.not.found"/>
         </c:if>
     </div>
-<page:list id="pl:com.gordo.itemmanager.entity.Item" items="${items}" z="3YNL4wNw2LqK87WT01AnlNJDXzo=">
-        <table:table data="${items}" id="l:com.gordo.itemmanager.entity.Item" path="/item" z="RHi/70oOm/HZ0ISMNf8Ek96WgvI=">
-            <table:column id="c:com.gordo.itemmanager.entity.Item.name" property="name" z="fyHJ6Y07FvLCxYH+bAizgd1VJ1w="/>
+
+<page:list id="pl_com_gordo_itemmanager_entity_Item" items="${items}" z="RvoAvv08BnzNJGiNvyf+qf190gs=">
+        <table:table data="${items}" id="l_com_gordo_itemmanager_entity_Item" path="/item" z="GvD0JUDNFAoeaC+e4K7i+IVWQLA=">
+            <table:column id="c_com_gordo_itemmanager_entity_Item_name" property="name" z="dvS87v5xYKz+K4pd/2nzwMSR6gM="/>
         </table:table>
     </page:list>
 </div>
