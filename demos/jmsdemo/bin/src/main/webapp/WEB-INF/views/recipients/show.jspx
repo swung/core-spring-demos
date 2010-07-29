@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_gordondickens_jmsdemo_entity_Recipient" object="${recipient}" z="S0beDJvdXhQCot94/ddTV3SoR+A=">
+        <field:display field="senderEmail" id="s_com_gordondickens_jmsdemo_entity_Recipient_senderEmail" object="${recipient}" z="dDaDjnyn/h82eaOqlES2dN41lA4="/>
+        <field:display field="senderFirstName" id="s_com_gordondickens_jmsdemo_entity_Recipient_senderFirstName" object="${recipient}" z="TgteNm5vWOzdjr/A0bgeHCjWdxw="/>
+        <field:display field="senderLastName" id="s_com_gordondickens_jmsdemo_entity_Recipient_senderLastName" object="${recipient}" z="R4SDjPjEY9h3L/7qAHgJho0HPOM="/>
+        <field:display field="recipientEmail" id="s_com_gordondickens_jmsdemo_entity_Recipient_recipientEmail" object="${recipient}" z="OQcsXQIALDJhhY45/EnTgqxhh+g="/>
+        <field:display field="recipientFirstName" id="s_com_gordondickens_jmsdemo_entity_Recipient_recipientFirstName" object="${recipient}" z="xXlJcW9KU6eDltvWRGekjtK74rs="/>
+        <field:display field="recipientLastName" id="s_com_gordondickens_jmsdemo_entity_Recipient_recipientLastName" object="${recipient}" z="Df9dd4+KS911ALyi1ALQuw8/1B0="/>
+        <field:display field="subject" id="s_com_gordondickens_jmsdemo_entity_Recipient_subject" object="${recipient}" z="b9grK+oMSKtcrGjOPJv44hRzhIo="/>
+        <field:display field="messageBody" id="s_com_gordondickens_jmsdemo_entity_Recipient_messageBody" object="${recipient}" z="h/ujIwJOwTTiZDvXXGwNg9j6CzY="/>
+    </page:show>
+</div>

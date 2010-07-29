@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_gordondickens_jmsdemo_entity_Recipient" items="${recipients}" z="YBx2Mvk1/n42xAlSiz/P3k2U2NQ=">
+        <table:table data="${recipients}" id="l_com_gordondickens_jmsdemo_entity_Recipient" path="/recipients" z="CBOnKaHg5ZJbEpW0BMy9xsITPY4=">
+            <table:column id="c_com_gordondickens_jmsdemo_entity_Recipient_senderEmail" property="senderEmail" z="sHPljNvWjT1xetdqklb0j3W9Hbs="/>
+            <table:column id="c_com_gordondickens_jmsdemo_entity_Recipient_senderFirstName" property="senderFirstName" z="hnSsYNwnNsGU7X5Y5imaTxdQI/8="/>
+            <table:column id="c_com_gordondickens_jmsdemo_entity_Recipient_senderLastName" property="senderLastName" z="LfSLNPu3pkoqlgD+rtdn58jTl9o="/>
+            <table:column id="c_com_gordondickens_jmsdemo_entity_Recipient_recipientEmail" property="recipientEmail" z="XqGlm9z+YQnm59VHncr6KEs0wZ0="/>
+            <table:column id="c_com_gordondickens_jmsdemo_entity_Recipient_recipientFirstName" property="recipientFirstName" z="CRmB3gbVXeEIGH3NyolA7hdfMb8="/>
+            <table:column id="c_com_gordondickens_jmsdemo_entity_Recipient_recipientLastName" property="recipientLastName" z="1g1VgPRPB15NtscwyN5CZ75/cGU="/>
+        </table:table>
+    </page:list>
+</div>
