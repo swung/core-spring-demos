@@ -8,8 +8,19 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>Spring Utility</name>
-	<url>http://www.springframework.org</url>
 	<description>Sample App for Days 1 &amp; 2 of Core Spring 3</description>
+	<url>http://www.gordondickens.com</url>
+	<developers>
+		<developer>
+			<id>gordon.dickens</id>
+			<name>Gordon Dickens</name>
+			<email>gordondickens@gmail.com</email>
+			<roles>
+				<role>Author</role>
+			</roles>
+			<organization>http://www.gordondickens.com</organization>
+		</developer>
+	</developers>	
 	<properties>
 		<maven.test.failure.ignore>true</maven.test.failure.ignore>
 		<spring.framework.version>3.0.3.RELEASE</spring.framework.version>
@@ -92,8 +103,8 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.5</source>
-					<target>1.5</target>
+					<source>1.6</source>
+					<target>1.6</target>
 				</configuration>
 			</plugin>
 			<plugin>

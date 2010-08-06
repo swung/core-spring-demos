@@ -13,7 +13,18 @@
 		<spring-security.version>3.0.3.RELEASE</spring-security.version>
 		<mockito.version>1.8.5</mockito.version>
 	</properties>
-
+  	<url>http://www.gordondickens.com</url>
+	<developers>
+		<developer>
+			<id>gordon.dickens</id>
+			<name>Gordon Dickens</name>
+			<email>gordondickens@gmail.com</email>
+			<roles>
+				<role>Author</role>
+			</roles>
+			<organization>http://www.gordondickens.com</organization>
+		</developer>
+	</developers>
 	<repositories>
 		<repository>
 			<id>com.springsource.repository.bundles.release</id>
