@@ -6,7 +6,7 @@
 	<artifactId>jmsdemo</artifactId>
 	<packaging>war</packaging>
 	<version>0.1.0.BUILD-SNAPSHOT</version>
-	<name>jmsdemo</name> 
+	<name>jmsdemo</name>
 	<url>http://www.gordondickens.com</url>
 	<developers>
 		<developer>
@@ -18,9 +18,10 @@
 			</roles>
 			<organization>http://www.gordondickens.com</organization>
 		</developer>
-	</developers>	<properties>
-		<roo.version>1.1.0.M2</roo.version>
-		<spring.version>3.0.3.RELEASE</spring.version>
+	</developers>
+	<properties>
+		<roo.version>1.1.0.M3</roo.version>
+		<spring.version>3.0.4.RELEASE</spring.version>
 		<aspectj.version>1.6.10.M1</aspectj.version>
 		<slf4j.version>1.6.1</slf4j.version>
 	</properties>
@@ -278,9 +279,9 @@
 			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>javax.jms</groupId>
-			<artifactId>com.springsource.javax.jms</artifactId>
-			<version>1.1.0</version>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-jms_1.1_spec</artifactId>
+			<version>1.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.activemq</groupId>
