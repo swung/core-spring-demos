@@ -10,9 +10,16 @@ public class Owner {
 		return minion;
 	}
 
-	public void setMinion(Minion minion) {
-		this.minion = minion;
+	@Override
+	public String toString() {
+		return "Owner [minion=" + minion + ", getMinion()=" + getMinion()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
 	}
+
+//	public void setMinion(Minion minion) {
+//		this.minion = minion;
+//	}
 	
 	
 }

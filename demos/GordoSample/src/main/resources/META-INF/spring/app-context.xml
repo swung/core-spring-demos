@@ -14,7 +14,7 @@
 
 	<import resource="classpath:/META-INF/spring/other-app-context.xml"/>
 
-
+<bean id="owner" class="com.gordo.propeditor.Owner"/>
 
 
  	<!--<aop:aspectj-autoproxy>
@@ -32,7 +32,7 @@
 	
 	-->
 	
-	<bean id="someId" name="dataSource, dataSource/primary" class="com.gordo.sample.ExampleService"/>
+	<bean name="dataSource, dataSource/primary" class="com.gordo.sample.ExampleService"/>
 	<!--<bean name="dataSource/primary" class="com.gordo.sample.ExampleService"/>-->
 
 	<bean id="setterTracker" class="com.gordo.sample.SetterTracker"/>
