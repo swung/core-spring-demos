@@ -20,7 +20,7 @@
         </c:if>
     </div>
 
-<page:show id="ps_com_gordo_itemmanager_entity_Item" object="${item}" z="xYc9rR1GIeUwST87uX7K2v5bN7s=">
+<page:show id="ps_com_gordo_itemmanager_entity_Item" object="${item}" path="/item" z="KkAz77yl5sXDudkvZbGDXKMV4FQ=">
         <field:display field="name" id="s_com_gordo_itemmanager_entity_Item_name" object="${item}" z="/sFtN0Te7yRvTraBaSJtlNE3zls="/>
     </page:show>
 </div>
