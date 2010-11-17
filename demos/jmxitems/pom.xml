@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.gordo.jmxitems</groupId>
 	<artifactId>jmxitems</artifactId>
@@ -20,10 +19,11 @@
 		</developer>
 	</developers>
 	<properties>
-		<roo.version>1.1.0.M3</roo.version>
-		<spring.version>3.0.4.RELEASE</spring.version>
+		<roo.version>1.1.0.RELEASE</roo.version>
+		<spring.version>3.0.5.RELEASE</spring.version>
 		<aspectj.version>1.6.10.M1</aspectj.version>
 		<slf4j.version>1.6.1</slf4j.version>
+		<logback.version>0.9.26</logback.version>
 	</properties>
 	<repositories>
 		<repository>
@@ -117,8 +117,23 @@
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
+			<artifactId>jul-to-slf4j</artifactId>
 			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-access</artifactId>
+			<version>${logback.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.aspectj</groupId>
