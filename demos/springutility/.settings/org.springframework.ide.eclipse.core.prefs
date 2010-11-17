@@ -1,7 +1,8 @@
-#Tue Jul 13 14:24:47 CDT 2010
+#Wed Nov 17 13:33:22 EST 2010
 eclipse.preferences.version=1
 org.springframework.ide.eclipse.core.builders.enable.aopreferencemodelbuilder=true
 org.springframework.ide.eclipse.core.builders.enable.beanmetadatabuilder=true
+org.springframework.ide.eclipse.core.builders.enable.com.springsource.sts.maven.core.dataNucleusEnhancerProjectBuilder=false
 org.springframework.ide.eclipse.core.builders.enable.osgibundleupdater=false
 org.springframework.ide.eclipse.core.enable.project.preferences=true
 org.springframework.ide.eclipse.core.validator.enable.com.springsource.platform.ide.manifest.core.manifestvalidator=true
@@ -49,7 +50,7 @@ org.springframework.ide.eclipse.core.validator.rule.enable.com.springsource.sts.
 org.springframework.ide.eclipse.core.validator.rule.enable.com.springsource.sts.server.quickfix.importLibraryVersionRule-com.springsource.sts.server.quickfix.manifestvalidator=false
 org.springframework.ide.eclipse.core.validator.rule.enable.com.springsource.sts.server.quickfix.importPackageVersionRule-com.springsource.sts.server.quickfix.manifestvalidator=false
 org.springframework.ide.eclipse.core.validator.rule.enable.com.springsource.sts.server.quickfix.requireBundleVersionRule-com.springsource.sts.server.quickfix.manifestvalidator=false
-org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.autowire.autowire-org.springframework.ide.eclipse.beans.core.beansvalidator=false
+org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.autowire.autowire-org.springframework.ide.eclipse.beans.core.beansvalidator=true
 org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.beanAlias-org.springframework.ide.eclipse.beans.core.beansvalidator=true
 org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.beanClass-org.springframework.ide.eclipse.beans.core.beansvalidator=true
 org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.beanConstructorArgument-org.springframework.ide.eclipse.beans.core.beansvalidator=true
@@ -61,8 +62,8 @@ org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.i
 org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.beanReference-org.springframework.ide.eclipse.beans.core.beansvalidator=true
 org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.methodOverride-org.springframework.ide.eclipse.beans.core.beansvalidator=true
 org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.parsingProblems-org.springframework.ide.eclipse.beans.core.beansvalidator=true
-org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.requiredProperty-org.springframework.ide.eclipse.beans.core.beansvalidator=false
-org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.toolAnnotation-org.springframework.ide.eclipse.beans.core.beansvalidator=false
+org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.requiredProperty-org.springframework.ide.eclipse.beans.core.beansvalidator=true
+org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.beans.core.toolAnnotation-org.springframework.ide.eclipse.beans.core.beansvalidator=true
 org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.core.springClasspath-org.springframework.ide.eclipse.core.springvalidator=true
 org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.webflow.core.validation.action-org.springframework.ide.eclipse.webflow.core.validator=true
 org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.webflow.core.validation.actionstate-org.springframework.ide.eclipse.webflow.core.validator=true

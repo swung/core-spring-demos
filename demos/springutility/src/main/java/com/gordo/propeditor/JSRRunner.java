@@ -14,7 +14,7 @@ public class JSRRunner {
 	 */
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(
-				"META-INF/spring/app-context.xml");
+				"/META-INF/spring/app-context.xml");
 
 //		Customer customer = (Customer) applicationContext.getBean("customer");
 //		Customer cust2 = (Customer) applicationContext.getBean("cust2");
