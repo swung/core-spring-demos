@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:jms="http://www.springframework.org/schema/jms"
 	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
 		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd
@@ -12,29 +11,21 @@
 
 	<description>Example configuration to get you started.</description>
 
-	<import resource="classpath:/META-INF/spring/other-app-context.xml"/>
+	<import resource="classpath:/META-INF/spring/other-app-context.xml" />
 
+	<context:mbean-server />
 
+	<!--<aop:aspectj-autoproxy> <aop:include name="setterTracker" /> </aop:aspectj-autoproxy> --><!--<bean id="service" class="com.gordo.sample.ExampleService" init-method="imInit"/> -->
+	<!--<bean id="customer" class="com.gordo.sample.MyCustFactory"/> -->
 
+	<context:component-scan base-package="com.gordo" />
 
- 	<!--<aop:aspectj-autoproxy>
-        <aop:include name="setterTracker" />
-    </aop:aspectj-autoproxy>
+	<!-- context:annotation-config/ -->
+	<!--<bean class="com.gordo.sample.ExampleService"/> <bean class="com.gordo.sample.ExampleService"/> -->
 
+	<bean id="someId" name="dataSource, dataSource/primary" class="com.gordo.sample.ExampleService" />
+	<!--<bean name="dataSource/primary" class="com.gordo.sample.ExampleService"/> -->
 
-	--><!--<bean id="service" class="com.gordo.sample.ExampleService" init-method="imInit"/>-->
-	<!--<bean id="customer" class="com.gordo.sample.MyCustFactory"/>-->
-
-	<context:component-scan base-package="com.gordo"/>
-	
-	<!--<bean class="com.gordo.sample.ExampleService"/>
-	<bean class="com.gordo.sample.ExampleService"/>
-	
-	-->
-	
-	<bean id="someId" name="dataSource, dataSource/primary" class="com.gordo.sample.ExampleService"/>
-	<!--<bean name="dataSource/primary" class="com.gordo.sample.ExampleService"/>-->
-
-	<bean id="setterTracker" class="com.gordo.sample.SetterTracker"/>
+	<bean id="setterTracker" class="com.gordo.sample.SetterTracker" />
 
 </beans>

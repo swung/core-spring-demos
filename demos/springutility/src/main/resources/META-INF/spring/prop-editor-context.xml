@@ -13,10 +13,6 @@
 		<property name="phoneNumber" value="2015551212" />
 	</bean>
 
-	<!--<bean id="phoneNumber" class="com.gordo.propeditor.PhoneNumber" />
-
-	<bean id="phoneNumberEditor" class="com.gordo.propeditor.PhoneNumberEditor" />-->
-
 	<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
 		<property name="customEditors">
 			<map>

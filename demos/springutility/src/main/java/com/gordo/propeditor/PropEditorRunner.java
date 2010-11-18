@@ -1,22 +1,24 @@
 package com.gordo.propeditor;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.gordo.sample.Customer;
 
 public class PropEditorRunner {
-
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		Logger logger = LoggerFactory.getLogger(PropEditorRunner.class);
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(
 				"META-INF/spring/prop-editor-context.xml");
 
 		Customer customer = (Customer) applicationContext.getBean("customer");
 
-		System.out.println("CUSTOMER DETAIL: " + customer.toString());
+		logger.debug("CUSTOMER DETAIL: " + customer.toString());
 
 	}
 

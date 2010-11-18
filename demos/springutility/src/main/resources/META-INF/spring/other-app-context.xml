@@ -9,5 +9,10 @@
 
 
 	<bean id="chowdah" name="dataSource" class="com.gordo.sample.ExampleServiceToo"/>
+
+
+
+
+	<bean id="someId" class="com.gordo.sample.ExampleServiceToo" />
 	
 </beans>
