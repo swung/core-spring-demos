@@ -15,17 +15,26 @@
 
 	<context:mbean-server />
 
-	<!--<aop:aspectj-autoproxy> <aop:include name="setterTracker" /> </aop:aspectj-autoproxy> --><!--<bean id="service" class="com.gordo.sample.ExampleService" init-method="imInit"/> -->
+	<aop:aspectj-autoproxy>
+		<aop:include name="setterTracker" />
+		<aop:include name="exceptionTestAspect"/>
+		<aop:include name="duplicateAspects"/>
+	</aop:aspectj-autoproxy> 
+	
+	
+	<!--<bean id="service" class="com.gordo.sample.ExampleService" init-method="imInit"/> -->
 	<!--<bean id="customer" class="com.gordo.sample.MyCustFactory"/> -->
 
-	<context:component-scan base-package="com.gordo" />
+	<context:component-scan base-package="com.gordondickens" />
 
 	<!-- context:annotation-config/ -->
 	<!--<bean class="com.gordo.sample.ExampleService"/> <bean class="com.gordo.sample.ExampleService"/> -->
 
-	<bean id="someId" name="dataSource, dataSource/primary" class="com.gordo.sample.ExampleService" />
-	<!--<bean name="dataSource/primary" class="com.gordo.sample.ExampleService"/> -->
+	<!--  bean id="someId" name="dataSource, dataSource/primary" class="com.gordondickens.sample.ExampleService" / -->
+	<!-- bean name="dataSource/primary" class="com.gordo.sample.ExampleService"/ -->
 
-	<bean id="setterTracker" class="com.gordo.sample.SetterTracker" />
+	<bean id="setterTracker" class="com.gordondickens.aspects.SetterTracker" />
+	<bean id="exceptionTestAspect" class="com.gordondickens.aspects.ExceptionTesterAspect" />
+	<bean id="duplicateAspects" class="com.gordondickens.aspects.DuplicateJoinPointAspects" />
 
 </beans>

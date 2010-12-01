@@ -8,11 +8,8 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 
-	<bean id="chowdah" name="dataSource" class="com.gordo.sample.ExampleServiceToo"/>
+	<bean id="chowdah" name="dataSource" class="com.gordondickens.sample.ExampleServiceToo"/>
 
-
-
-
-	<bean id="someId" class="com.gordo.sample.ExampleServiceToo" />
+	<bean id="someId" class="com.gordondickens.sample.ExampleServiceToo" />
 	
 </beans>
