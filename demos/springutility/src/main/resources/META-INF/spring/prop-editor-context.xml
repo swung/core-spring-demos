@@ -7,7 +7,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 
-	<bean id="customer" class="com.gordo.sample.CustomerImpl">
+	<bean id="customer" class="com.gordondickens.sample.CustomerImpl">
 		<property name="firstName" value="Gordon" />
 		<property name="lastName" value="Springster" />
 		<property name="phoneNumber" value="2015551212" />
@@ -16,8 +16,8 @@
 	<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
 		<property name="customEditors">
 			<map>
-				<entry key="com.gordo.propeditor.PhoneNumber"
-					value="com.gordo.propeditor.PhoneNumberEditor" />
+				<entry key="com.gordondickens.propeditor.PhoneNumber"
+					value="com.gordondickens.propeditor.PhoneNumberEditor" />
 			</map>
 		</property>
 	</bean>
