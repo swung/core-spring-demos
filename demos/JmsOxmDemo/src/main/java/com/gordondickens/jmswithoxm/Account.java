@@ -6,13 +6,11 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 
-@XmlRootElement(name="account")
+@XmlRootElement(name = "account")
 @XmlAccessorType(XmlAccessType.FIELD)
-//@XmlType(name = "account")
 public class Account {
-    @XmlElement(required = true)
+	@XmlElement(required = true)
 	private String name;
 
 	@XmlElement
@@ -50,6 +48,5 @@ public class Account {
 		return "Account [name=" + name + ", description=" + description
 				+ ", balance=" + balance + "]";
 	}
-	
-	
+
 }
