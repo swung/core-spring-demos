@@ -21,9 +21,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
-public class JunitWithOxmTest {
+public class JmsWithOxmTest {
 	private static final Logger logger = LoggerFactory
-			.getLogger(JunitWithOxmTest.class);
+			.getLogger(JmsWithOxmTest.class);
 	private static final String TEST_DEST = "oxmTestQueue";
 
 	@Autowired
@@ -68,7 +68,7 @@ public class JunitWithOxmTest {
 		Account account = new Account();
 		account.setBalance(new BigDecimal(12345.67));
 		account.setDescription("A no account varmint");
-		account.setName("Waskally Wabbit");
+		account.setName("Waskally Wabbit - Gordon Test June 2011");
 		logger.debug("Generated Test Message: " + account.toString());
 		return account;
 	}
