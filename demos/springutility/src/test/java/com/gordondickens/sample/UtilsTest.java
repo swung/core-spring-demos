@@ -1,6 +1,7 @@
 package com.gordondickens.sample;
 
-import org.junit.Before;
+import static org.junit.Assert.assertNotNull;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -9,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.gordondickens.utils.UtilsExperiment;
 
 //Equivalent to: @ContextConfiguration("classpath:/com/gordondickens/sample/UtilsTest-context.xml")
 //@ContextConfiguration
@@ -20,40 +23,24 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 //@ContextConfiguration(value = "META-INF/spring/utils-context.xml")
 
 //Equivalent to: @ContextConfiguration("classpath:/META-INF/spring/utils-context.xml")
-//@ContextConfiguration(value = "/META-INF/spring/utils-context.xml")
-//Equivalent to: @ContextConfiguration("classpath:/META-INF/spring/utils-context.xml")
-@ContextConfiguration(locations = {"utils-context.xml", "app-context"})
+@ContextConfiguration(value = "/META-INF/spring/utils-context.xml")
+// Equivalent to:
+// @ContextConfiguration("classpath:/META-INF/spring/utils-context.xml")
 @RunWith(SpringJUnit4ClassRunner.class)
 public class UtilsTest {
-	private Logger logger = LoggerFactory.getLogger(UtilsTest.class);
-	
+	private final Logger logger = LoggerFactory.getLogger(UtilsTest.class);
+
 	@Autowired
 	ApplicationContext context;
 
-	@Before
-	public void setup() {
-		logger.debug("******************************************************************************");
-		String[] beans = context.getBeanDefinitionNames();
-		for (String o : beans) {
-			logger.debug("________________________");
-			logger.debug("BEAN = " + o);
-			logger.debug("\tType = " + context.getType(o));
-			String[] aliases = context.getAliases(o);
-			if (aliases != null && aliases.length > 0) {
-				for (String a : aliases) {
-					logger.debug("\tAliased as: " + a);
-				}
-				// logger.debug("\tAliased as: " + aliases.toString());
-			}
-		}
-
-		logger.debug("******************************************************************************");
-	}
-
-	
-	
 	@Test
 	public void showUtilsInfo() {
-		
+		UtilsExperiment utilsExperiment = context
+				.getBean(UtilsExperiment.class);
+		assertNotNull(utilsExperiment);
+		logger.debug(
+				"\n\n************\n\n UTILS Results:\n\t{} \n\n************\n\n",
+				utilsExperiment.toString());
+
 	}
 }

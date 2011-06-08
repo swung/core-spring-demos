@@ -2,24 +2,28 @@ package com.gordondickens.sample;
 
 import javax.annotation.PostConstruct;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import com.gordondickens.propeditor.PhoneNumber;
 
 @Component("customer")
 public class CustomerImpl implements Customer {
+	private static final Logger logger = LoggerFactory
+			.getLogger(CustomerImpl.class);
+
 	String firstName = null;
 	String lastName = null;
 	PhoneNumber phoneNumber = null;
 
 	public CustomerImpl() {
-		System.out.println("CUSTIMPL constructed - " + this.toString());
+		logger.debug("CUSTIMPL constructed = '{}'", this.toString());
 	}
 
 	public CustomerImpl(String lastName) {
 		this.lastName = lastName;
-		System.out
-				.println("CUSTIMPL lastname constructed = " + this.toString());
+		logger.debug("CUSTIMPL lastname constructed = '{}'", this.toString());
 	}
 
 	@Override
@@ -55,7 +59,7 @@ public class CustomerImpl implements Customer {
 
 	@PostConstruct
 	public void runThis() {
-		System.out.println("**** Post Construct");
+		logger.debug("**** Post Construct");
 	}
 
 	@Override
@@ -66,7 +70,7 @@ public class CustomerImpl implements Customer {
 
 	// @Override
 	// public void slap() {
-	// System.out.println(this.getClass().getName() + " has been SLAPPED");
+	// logger.debug(this.getClass().getName() + " has been SLAPPED");
 	//
 	// }
 

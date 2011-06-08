@@ -2,37 +2,40 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
 
 	<bean id="utilsexperiment" class="com.gordondickens.utils.UtilsExperiment">
 		<property name="names">
-		<!--  This will always create an ArrayList, use "util" namespace to change impl type -->
-		<!--  Can specify the value type for "Generics" -->
-<!-- 			<list value-type="java.util.LinkedList">
+			<!-- This will always create an ArrayList, use "util" namespace to change
+				impl type -->
+			<!-- Can specify the value type for "Generics" -->
+			<!--
+				<list value-type="java.util.Map">
 				<value>Rose</value>
-				<value>Emily</value>
 				<value>Jasmine</value>
 				<value>Jaimi</value>
+				<value>Ging</value>
 				<value>Michele</value>
-			</list>
- -->
- <!-- 			
-			<util:list >
+				<value>Teresa</value>
+				</list>
+			-->
+
+			<util:list list-class="java.util.ArrayList" value-type="java.lang.String">
 				<value>Rose</value>
-				<value>Emily</value>
 				<value>Jasmine</value>
 				<value>Jaimi</value>
+				<value>Ging</value>
 				<value>Michele</value>
+				<value>Teresa</value>
 			</util:list>
--->
-			
- 		</property>
-<!-- 
-		<property name="otherNames" ref="somenames"/>
--->			
+
+		</property>
+
+	<property name="otherNames" ref="somenames" />
+
 	</bean>
 
 	<!-- Can define SCOPE, LIST-CLASS & VALUE-TYPE -->
@@ -41,6 +44,4 @@
 		<value>Ken</value>
 		<value>Craig</value>
 	</util:list>
-	
-
 </beans>

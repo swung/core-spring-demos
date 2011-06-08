@@ -16,6 +16,12 @@
 package com.gordondickens.sample;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
+
+import java.util.zip.DataFormatException;
+
+import javax.naming.InsufficientResourcesException;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -33,6 +39,7 @@ public class ExampleConfigurationTests {
 	@Autowired
 	private Service service;
 
+	// TESTING Autowired. See Log Output, after running.
 	@Autowired
 	private MyExceptionThrower myExceptionThrower;
 
@@ -44,13 +51,27 @@ public class ExampleConfigurationTests {
 	@Test
 	public void testExceptionAOP() throws Exception {
 		logger.debug("ThrowingExceptionOne");
-		myExceptionThrower.ThrowExceptionOnePlease();
+		try {
+			myExceptionThrower.ThrowExceptionOnePlease();
+		} catch (DataFormatException dae) {
+			assertTrue(true);
+		} catch (Exception e) {
+			fail("Expected DataFormatException");
+		}
+
 	}
 
 	@Test
 	public void testExceptionAOP2() throws Exception {
 		logger.debug("ThrowingExceptionTwo");
-		myExceptionThrower.ThrowExceptionTwoPlease();
+		try {
+			myExceptionThrower.ThrowExceptionTwoPlease();
+		} catch (InsufficientResourcesException ire) {
+			assertTrue(true);
+		} catch (Exception e) {
+			fail("Expected InsufficientResourcesException");
+		}
+
 	}
 
 }

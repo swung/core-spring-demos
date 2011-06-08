@@ -62,6 +62,6 @@ public class BeansInContextTests {
 
 	@Test
 	public void showUtilsInfo() {
-
+		// run me
 	}
 }

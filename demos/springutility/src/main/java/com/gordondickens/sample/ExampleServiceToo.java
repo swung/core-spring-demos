@@ -2,39 +2,48 @@ package com.gordondickens.sample;
 
 import javax.annotation.PostConstruct;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
-
 
 /**
  * {@link Service} with hard-coded input data.
  */
 public class ExampleServiceToo implements Service, InitializingBean {
-	
+	private static final Logger logger = LoggerFactory
+			.getLogger(ExampleServiceToo.class);
+
 	public ExampleServiceToo() {
-		System.out.println("EStoo CONSTRUCTED address = " + this.toString());
+		logger.debug(
+				"\n**********\n\tEStoo CONSTRUCTED address = '{}'\n**********",
+				this.toString());
 	}
-	
+
 	/**
 	 * Reads next record from input
 	 */
+	@Override
 	public String getMessage() {
-		return "Hello Gordo!";	
+		return "Hello Gordo!";
 	}
-	
+
 	@PostConstruct
 	private void pcInit() {
-		System.out.println("1. ES2 post-construct = " + this.toString());
+		logger.debug("\n**********\n\tES2 post-construct = '{}'\n**********",
+				this.toString());
 	}
 
 	private void imInit() {
-		System.out.println("2. ES2 Init Method = " + this.toString());
+		logger.debug("\n**********\n\tES2 Init Method = '{}'\n**********",
+				this.toString());
 	}
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		System.out.println("3. ES2 After Properties Set = " + this.toString());
-		
+		logger.debug(
+				"\n**********\n\tES2 InitializingBean interface - afterPropertiesSet = '{}'\n*****'",
+				this.toString());
+
 	}
-	
-	
+
 }
