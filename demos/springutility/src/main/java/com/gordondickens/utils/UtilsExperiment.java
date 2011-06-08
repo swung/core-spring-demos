@@ -3,22 +3,23 @@ package com.gordondickens.utils;
 import java.util.List;
 
 public class UtilsExperiment {
-	List names;
-	List otherNames;
+	List<String> names;
+	List<String> otherNames;
 
-	public List getNames() {
+	public List<String> getNames() {
 		return names;
 	}
 
-	public void setNames(List names) {
-		this.names = names;
+	public void setNames(List<String> names) {
+		this.names.clear();
+		this.names.addAll(names);
 	}
 
-	public List getOtherNames() {
+	public List<String> getOtherNames() {
 		return otherNames;
 	}
 
-	public void setOtherNames(List otherNames) {
+	public void setOtherNames(List<String> otherNames) {
 		this.otherNames = otherNames;
 	}
 
