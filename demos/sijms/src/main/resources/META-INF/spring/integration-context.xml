@@ -13,8 +13,7 @@
     <import resource="classpath:META-INF/spring/amq-context.xml"/>
 
     <context:mbean-server/>
-    <context:component-scan base-package="com.gordondickens"/>
-
+    
     <si:message-history tracked-components="*Channel,*Gateway"/>
 
     <si:annotation-config/>
@@ -23,13 +22,11 @@
         <si:interval-trigger interval="500"/>
     </si:poller>
 
-    <si:logging-channel-adapter id="myRequestChannel" level="DEBUG" log-full-message="true"/>
-    <!--<si:logging-channel-adapter id="myReplyChannel" level="DEBUG" log-full-message="true"/>-->
-    <!--<si:logging-channel-adapter id="errorChannel" level="DEBUG" log-full-message="true"/>-->
+    <!-- <si:logging-channel-adapter id="myRequestChannel" level="DEBUG" log-full-message="true"/> -->
+    <si:channel id="myRequestChannel"/>
 
     <si:gateway id="myJmsGateway" service-interface="com.gordondickens.sijms.MyJmsGateway"
                 default-request-channel="myRequestChannel"/>
 
-
-    <jms:outbound-channel-adapter channel="myRequestChannel" destination="my.inbound.queue"/>
+	<jms:outbound-channel-adapter channel="myRequestChannel" connection-factory="connectionFactory" destination="my.inbound.queue"/>
 </beans>

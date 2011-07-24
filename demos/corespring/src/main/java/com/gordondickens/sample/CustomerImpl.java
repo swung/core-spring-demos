@@ -68,10 +68,5 @@ public class CustomerImpl implements Customer {
 				+ lastName + ", phoneNumber=" + phoneNumber + "]";
 	}
 
-	// @Override
-	// public void slap() {
-	// logger.debug(this.getClass().getName() + " has been SLAPPED");
-	//
-	// }
 
 }

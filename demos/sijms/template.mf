@@ -1,5 +1,6 @@
 Bundle-SymbolicName: com.gordondickens.sijms
 Bundle-Name: Spring Utility
+Bundle-Version: 1.0.0
 Bundle-Vendor: SpringSource
 Bundle-ManifestVersion: 2
 Import-Template: 

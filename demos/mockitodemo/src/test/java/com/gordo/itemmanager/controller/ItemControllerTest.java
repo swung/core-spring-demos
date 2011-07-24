@@ -27,6 +27,7 @@ import com.gordo.itemmanager.service.internal.ItemService;
 public class ItemControllerTest {
 	private ItemController itemController;
 
+	// @Mock(answer = Answers.RETURNS_DEEP_STUBS)
 	@Mock
 	private ItemService itemService;
 	private ModelMap modelMap;
@@ -42,12 +43,18 @@ public class ItemControllerTest {
 		Item item = new Item();
 		item.setId(1l);
 		item.setName("Item 1");
+		// when() Creates a dynamic stub
+		// If real method invocation is desired, use spy
 		when(itemService.getItem(item.getId())).thenReturn(item);
 
 		String view = itemController.show(item.getId(), modelMap);
 
 		assertEquals(item, modelMap.get("item"));
 		assertEquals("item/show", view);
+		// TODO: Add behavior test
+		// Note: verifying stubs (@Mock & when()) is redundant, to verify actual
+		// behavior,
+		// use spy instead, (@Spy)
 	}
 
 	@Test
@@ -59,6 +66,7 @@ public class ItemControllerTest {
 
 		assertEquals("redirect:/errorView", view);
 		assertSame(exception, modelMap.get("exception"));
+		// TODO: Add behavior test
 	}
 
 	@Test
@@ -67,6 +75,7 @@ public class ItemControllerTest {
 
 		verify(itemService).deleteItem(5l);
 		assertTrue(view.startsWith("redirect:/item?page="));
+		// TODO: Add behavior test
 	}
 
 	/**
@@ -84,7 +93,7 @@ public class ItemControllerTest {
 		String view = itemController.deleteItems(testIds);
 
 		verify(itemService, times(testIds.size())).deleteItem(anyLong());
-		assertTrue(view.equals("redirect:/item"));
+		assertTrue(view.equals("redirect:/item")); // redir to view list page
 	}
 
 }

@@ -16,4 +16,10 @@ public class NotACustomer {
 		this.lastName = lastName;
 	}
 	
+	@Override
+	public String toString() {
+		return "NotACustomer [firstName=" + firstName + ", lastName="
+				+ lastName + "]";
+	}
+
 }

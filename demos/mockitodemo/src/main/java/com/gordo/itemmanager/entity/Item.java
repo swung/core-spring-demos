@@ -123,6 +123,7 @@ public class Item {
 				.getResultList();
 	}
 
+	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Id: ").append(getId()).append(", ");

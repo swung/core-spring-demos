@@ -25,7 +25,7 @@ public class UtilsExperiment {
 		return otherNames;
 	}
 
-	public void setOtherNames(List<String> otherNames) {
+	public void setOtherNames(java.util.LinkedList<String> otherNames) {
 		this.otherNames = otherNames;
 	}
 

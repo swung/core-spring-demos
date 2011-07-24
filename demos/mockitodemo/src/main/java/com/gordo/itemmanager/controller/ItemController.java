@@ -127,6 +127,7 @@ public class ItemController {
 
 	Converter<Item, String> getItemConverter() {
 		return new Converter<Item, String>() {
+			@Override
 			public String convert(Item item) {
 				return new StringBuilder().append(item.getName()).toString();
 			}

@@ -14,7 +14,7 @@
 		<java.version>1.6</java.version>
 		<java.version.range>[1.6,)</java.version.range>
 		<junit.version>4.8.2</junit.version>
-		<logback.version>0.9.28</logback.version>
+		<logback.version>0.9.29</logback.version>
 		<maven.assembly.plugin>2.2.1</maven.assembly.plugin>
 		<maven.clean.plugin>2.4.1</maven.clean.plugin>
 		<maven.compiler.plugin>2.3.2</maven.compiler.plugin>
@@ -32,7 +32,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<slf4j.version>1.6.1</slf4j.version>
 		<spring.version>3.1.0.BUILD-SNAPSHOT</spring.version>
-		<wtp.version>2.0</wtp.version>
+ <!-- 		<spring.version>3.0.5.RELEASE</spring.version>
+ -->
+ 		<wtp.version>2.0</wtp.version>
 	</properties>
 	<developers>
 		<developer>
@@ -54,11 +56,11 @@
 			<version>${spring.version}</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
+<!-- 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
 			<version>${spring.version}</version>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -69,6 +71,11 @@
 					<artifactId>commons-logging</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>

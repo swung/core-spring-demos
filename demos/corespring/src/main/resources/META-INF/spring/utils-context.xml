@@ -12,8 +12,8 @@
 			<!-- This will always create an ArrayList, use "util" namespace to change
 				impl type -->
 			<!-- Can specify the value type for "Generics" -->
-			<!--
-				<list value-type="java.util.Map">
+			
+				<list  value-type="java.lang.String">
 				<value>Rose</value>
 				<value>Jasmine</value>
 				<value>Jaimi</value>
@@ -21,9 +21,9 @@
 				<value>Michele</value>
 				<value>Teresa</value>
 				</list>
-			-->
-
-			<util:list list-class="java.util.ArrayList" value-type="java.lang.String">
+			
+<!-- 
+			<util:list  list-class="java.util.ArrayList" value-type="java.lang.String">
 				<value>Rose</value>
 				<value>Jasmine</value>
 				<value>Jaimi</value>
@@ -31,7 +31,7 @@
 				<value>Michele</value>
 				<value>Teresa</value>
 			</util:list>
-
+ -->
 		</property>
 
 	<property name="otherNames" ref="somenames" />

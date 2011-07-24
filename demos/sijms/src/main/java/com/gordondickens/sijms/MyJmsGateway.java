@@ -13,9 +13,10 @@ import org.springframework.integration.annotation.Header;
  * @author Gordon Dickens
  *
  */
-//@Component("myJmsGateway")
 public interface MyJmsGateway {
     @Gateway
 	public void sendMyMessage(@Header("myHeaderKey") String s, Object o);
 
+    @Gateway
+	public void sendMyMessage(Object o);
 }

@@ -32,7 +32,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 // })
 @RunWith(SpringJUnit4ClassRunner.class)
 public class BeansInContextTests {
-	private final Logger logger = LoggerFactory
+	private static final Logger logger = LoggerFactory
 			.getLogger(BeansInContextTests.class);
 
 	@Autowired

@@ -16,7 +16,8 @@
 	<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
 		<property name="customEditors">
 			<map>
-				<entry key="com.gordondickens.propeditor.PhoneNumber" value="com.gordondickens.propeditor.PhoneNumberEditor" />
+				<entry key="com.gordondickens.propeditor.PhoneNumber"
+				value="com.gordondickens.propeditor.PhoneNumberEditor" />
 			</map>
 		</property>
 	</bean>
