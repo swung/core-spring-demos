@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_gordondickens_spelsample_entity_MyEnvironment" items="${myenvironments}" z="q08+c/S+ahR7Rc1kCWZfS+2KwSg=">
+        <table:table data="${myenvironments}" id="l_com_gordondickens_spelsample_entity_MyEnvironment" path="/myenvironments" z="IAVClkNfi4fSDJc8DCN8NbQZDkk=">
+            <table:column id="c_com_gordondickens_spelsample_entity_MyEnvironment_varOne" property="varOne" z="VH+Z3/8XK1+NueezhaQnFtDFDbg="/>
+            
+            
+        <table:column id="c_com_gordondickens_spelsample_entity_MyEnvironment_systemProperties" property="systemProperties" z="JJbHoK4sToLxADJ6LBU9v6a6gF8="/>
+            <table:column id="c_com_gordondickens_spelsample_entity_MyEnvironment_systemEnvironment" property="systemEnvironment" z="2pjt/al86jYNbkArSog0z1EtUpk="/>
+        </table:table>
+    </page:list>
+</div>

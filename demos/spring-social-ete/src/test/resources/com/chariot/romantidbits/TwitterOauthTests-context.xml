@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+	<context:property-placeholder location="classpath:twitter.properties"/>
+	
+	<import resource="classpath:/META-INF/spring/app-context.xml" />
+
+	<!--
+		arg0 apiKey the application's API key
+		arg1 apiSecret the application's API secret
+		arg2 accessToken an access token acquired through OAuth authentication
+		arg3 accessTokenSecret an access token secret acquired through OAuth authentication
+	-->
+	<bean id="twitterTemplate" class="org.springframework.social.twitter.api.impl.TwitterTemplate">
+		<constructor-arg index="0" value="{twitter.apiKey}" />
+		<constructor-arg index="1" value="{twitter.apiSecret}" />
+		<constructor-arg index="2" value="{twitter.accessToken}" />
+		<constructor-arg index="3" value="{twitter.accessTokenSecret}" />
+	</bean>
+
+</beans>

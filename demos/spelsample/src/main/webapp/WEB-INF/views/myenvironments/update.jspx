@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_gordondickens_spelsample_entity_MyEnvironment" modelAttribute="myEnvironment" path="/myenvironments" versionField="Version" z="wmHNJMDOhfwdJn47N/SZWaG6nLE=">
+        <field:input field="varOne" id="c_com_gordondickens_spelsample_entity_MyEnvironment_varOne" z="MUIPop8G+gwdFgY9gumcCBztn30="/>
+        
+        
+    <field:input field="systemProperties" id="c_com_gordondickens_spelsample_entity_MyEnvironment_systemProperties" z="lvt19OGPmddlv0kciHndxX6WU4Q="/>
+        <field:input field="systemEnvironment" id="c_com_gordondickens_spelsample_entity_MyEnvironment_systemEnvironment" z="5VnOIBAHFHnJUI2Z+KA9u7NbzQI="/>
+    </form:update>
+</div>
