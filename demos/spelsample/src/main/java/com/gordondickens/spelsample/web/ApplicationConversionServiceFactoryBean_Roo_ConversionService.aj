@@ -19,9 +19,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         installLabelConverters(getObject());
     }
     
-    static class com.gordondickens.spelsample.web.ApplicationConversionServiceFactoryBean.MyEnvironmentConverter implements Converter<MyEnvironment, String>  {
+    static class com.gordondickens.spelsample.web.ApplicationConversionServiceFactoryBean.MyEnvironmentConverter implements Converter<MyEnvironment, String> {
         public String convert(MyEnvironment myEnvironment) {
-        return new StringBuilder().append(myEnvironment.getVarOne()).append(" ").append(myEnvironment.getSystemProperties()).append(" ").append(myEnvironment.getSystemEnvironment()).toString();
+            return new StringBuilder().append(myEnvironment.getVarOne()).append(" ").append(myEnvironment.getSystemProperties()).append(" ").append(myEnvironment.getSystemEnvironment()).toString();
         }
         
     }

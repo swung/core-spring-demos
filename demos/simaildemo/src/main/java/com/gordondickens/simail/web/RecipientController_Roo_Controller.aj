@@ -23,17 +23,6 @@ import org.springframework.web.util.WebUtils;
 
 privileged aspect RecipientController_Roo_Controller {
     
-    @RequestMapping(method = RequestMethod.POST)
-    public String RecipientController.create(@Valid Recipient recipient, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            uiModel.addAttribute("recipient", recipient);
-            return "recipients/create";
-        }
-        uiModel.asMap().clear();
-        recipient.persist();
-        return "redirect:/recipients/" + encodeUrlPathSegment(recipient.getId().toString(), httpServletRequest);
-    }
-    
     @RequestMapping(params = "form", method = RequestMethod.GET)
     public String RecipientController.createForm(Model uiModel) {
         uiModel.addAttribute("recipient", new Recipient());

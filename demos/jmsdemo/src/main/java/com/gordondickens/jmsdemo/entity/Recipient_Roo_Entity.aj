@@ -58,7 +58,7 @@ privileged aspect Recipient_Roo_Entity {
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            Recipient attached = this.entityManager.find(this.getClass(), this.id);
+            Recipient attached = Recipient.findRecipient(this.id);
             this.entityManager.remove(attached);
         }
     }
@@ -67,6 +67,12 @@ privileged aspect Recipient_Roo_Entity {
     public void Recipient.flush() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.flush();
+    }
+    
+    @Transactional
+    public void Recipient.clear() {
+        if (this.entityManager == null) this.entityManager = entityManager();
+        this.entityManager.clear();
     }
     
     @Transactional
@@ -84,11 +90,11 @@ privileged aspect Recipient_Roo_Entity {
     }
     
     public static long Recipient.countRecipients() {
-        return entityManager().createQuery("select count(o) from Recipient o", Long.class).getSingleResult();
+        return entityManager().createQuery("SELECT COUNT(o) FROM Recipient o", Long.class).getSingleResult();
     }
     
     public static List<Recipient> Recipient.findAllRecipients() {
-        return entityManager().createQuery("select o from Recipient o", Recipient.class).getResultList();
+        return entityManager().createQuery("SELECT o FROM Recipient o", Recipient.class).getResultList();
     }
     
     public static Recipient Recipient.findRecipient(Long id) {
@@ -97,7 +103,7 @@ privileged aspect Recipient_Roo_Entity {
     }
     
     public static List<Recipient> Recipient.findRecipientEntries(int firstResult, int maxResults) {
-        return entityManager().createQuery("select o from Recipient o", Recipient.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+        return entityManager().createQuery("SELECT o FROM Recipient o", Recipient.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
 }

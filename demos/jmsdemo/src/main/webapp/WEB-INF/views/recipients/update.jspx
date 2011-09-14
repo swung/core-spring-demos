@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
     <jsp:output omit-xml-declaration="yes"/>
-    <form:update id="fu_com_gordondickens_jmsdemo_entity_Recipient" modelAttribute="recipient" path="/recipients" z="klbX2ePgCdlEH2avM0hYLhFz+IQ=">
+    <form:update id="fu_com_gordondickens_jmsdemo_entity_Recipient" modelAttribute="recipient" path="/recipients" versionField="Version" z="HdyA/2snkH/Tiaxj3aJKlaIFoqA=">
         <field:input field="senderEmail" id="c_com_gordondickens_jmsdemo_entity_Recipient_senderEmail" z="/tOFF8uMk7HAzhp0Kh/3YJ1ozms="/>
         <field:input field="senderFirstName" id="c_com_gordondickens_jmsdemo_entity_Recipient_senderFirstName" z="wRbNqvdH3Xwh8328DrekQhijQKg="/>
         <field:input field="senderLastName" id="c_com_gordondickens_jmsdemo_entity_Recipient_senderLastName" z="lZ1tdPYAFGkwWxdKDRo40/lZrdA="/>

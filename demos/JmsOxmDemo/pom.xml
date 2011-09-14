@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.gordondickens.jmswithoxm</groupId>
 	<artifactId>spring-jms-oxm</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<packaging>jar</packaging>
 	<name>JMS to OXM Spring</name>
 	<url>http://gordondickens.com</url>
@@ -25,9 +25,10 @@
 	<properties>
 		<activation.version>1.1.1</activation.version>
 		<spring.version>3.1.0.BUILD-SNAPSHOT</spring.version>
-		<junit.version>4.8.2</junit.version>
+		<java.version>1.6</java.version>
+		<junit.version>4.9</junit.version>
 		<jms.version>1.1.1</jms.version>
-		<slf4j.version>1.6.1</slf4j.version>
+		<slf4j.version>1.6.2</slf4j.version>
 		<activemq.version>5.5.0</activemq.version>
 		<logback.version>0.9.29</logback.version>
 		<xbean.version>3.7</xbean.version>
@@ -37,9 +38,21 @@
 		<commons.beanutils.version>1.8.3</commons.beanutils.version>
 		<commons.collections.version>3.2.1</commons.collections.version>
 		<commons.io.version>2.0.1</commons.io.version>
-		<commons.lang.version>2.5</commons.lang.version>
-		<commons.net.version>3.0</commons.net.version>
+		<commons.lang.version>2.6</commons.lang.version>
+		<commons.net.version>3.0.1</commons.net.version>
 
+		<maven.clean.plugin>2.4.1</maven.clean.plugin>
+		<maven.compiler.plugin>2.3.2</maven.compiler.plugin>
+		<maven.dependency.plugin>2.3</maven.dependency.plugin>
+		<maven.deploy.plugin>2.6</maven.deploy.plugin>
+		<maven.eclipse.plugin>2.8</maven.eclipse.plugin>
+		<maven.idea.plugin>2.2</maven.idea.plugin>
+		<maven.resources.plugin>2.5</maven.resources.plugin>
+		<maven.source.plugin>2.1.2</maven.source.plugin>
+		<maven.surefire.plugin>2.9</maven.surefire.plugin>
+		<maven.tomcat.plugin>1.1</maven.tomcat.plugin>
+		<maven.jetty.plugin>8.0.0.M2</maven.jetty.plugin>
+		<maven.war.plugin>2.1.1</maven.war.plugin>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.test.failure.ignore>false</maven.test.failure.ignore>
 	</properties>
@@ -246,12 +259,12 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.7.1</version>
+				<version>${maven.surefire.plugin}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.8</version>
+				<version>${maven.eclipse.plugin}</version>
 				<configuration>
 					<downloadSources>true</downloadSources>
 					<downloadJavadocs>true</downloadJavadocs>
@@ -269,21 +282,69 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>${maven.compiler.plugin}</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>${maven.source.plugin}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>${maven.clean.plugin}</version>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>${project.basedir}</directory>
+							<includes>
+								<include>activemq-data</include>
+								<include>derby-home</include>
+								<include>amqstore</include>
+								<include>.clover</include>
+								<include>surefire*</include>
+								<include>derby.log</include>
+							</includes>
+							<followSymlinks>false</followSymlinks>
+						</fileset>
+					</filesets>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-idea-plugin</artifactId>
-				<version>2.2</version>
+				<version>${maven.idea.plugin}</version>
 				<configuration>
 					<downloadSources>true</downloadSources>
 					<downloadJavadocs>true</downloadJavadocs>
 					<dependenciesAsLibraries>true</dependenciesAsLibraries>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>${maven.resources.plugin}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>${maven.dependency.plugin}</version>
+				<dependencies>
+					<dependency>
+						<groupId>junit</groupId>
+						<artifactId>junit</artifactId>
+						<version>${junit.version}</version>
+					</dependency>
+					<dependency>
+						<groupId>commons-io</groupId>
+						<artifactId>commons-io</artifactId>
+						<version>${commons.io.version}</version>
+					</dependency>
+				</dependencies>
 			</plugin>
 		</plugins>
 	</build>

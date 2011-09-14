@@ -19,7 +19,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         installLabelConverters(getObject());
     }
     
-    static class com.gordondickens.simail.web.ApplicationConversionServiceFactoryBean.RecipientConverter implements Converter<Recipient, String>  {
+    static class com.gordondickens.simail.web.ApplicationConversionServiceFactoryBean.RecipientConverter implements Converter<Recipient, String> {
         public String convert(Recipient recipient) {
             return new StringBuilder().append(recipient.getRecipientEmail()).append(" ").append(recipient.getSubject()).append(" ").append(recipient.getMessageBody()).toString();
         }

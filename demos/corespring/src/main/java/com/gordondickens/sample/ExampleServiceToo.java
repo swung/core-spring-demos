@@ -1,7 +1,5 @@
 package com.gordondickens.sample;
 
-import javax.annotation.PostConstruct;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
@@ -27,23 +25,23 @@ public class ExampleServiceToo implements Service, InitializingBean {
 		return "Hello Gordo!";
 	}
 
-	@PostConstruct
+	// @PostConstruct
 	private void pcInit() {
 		logger.debug("\n**********\n\tES2 post-construct = '{}'\n**********",
 				this.toString());
 	}
 
 	private void imInit() {
-		logger.debug("\n**********\n\tES2 Init Method = '{}'\n**********",
-				this.toString());
+		// logger.debug("\n**********\n\tES2 Init Method = '{}'\n**********",
+		// this.toString());
 	}
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		logger.debug(
-				"\n**********\n\tES2 InitializingBean interface - afterPropertiesSet = '{}'\n*****'",
-				this.toString());
-
+		// logger.debug(
+		// "\n**********\n\tES2 InitializingBean interface - afterPropertiesSet = '{}'\n*****'",
+		// this.toString());
+		//
 	}
 
 }

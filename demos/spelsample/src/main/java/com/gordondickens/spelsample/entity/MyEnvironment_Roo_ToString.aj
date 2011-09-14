@@ -9,9 +9,11 @@ privileged aspect MyEnvironment_Roo_ToString {
     
     public String MyEnvironment.toRooString() {
         StringBuilder sb = new StringBuilder();
+        sb.append("Id: ").append(getId()).append(", ");
         sb.append("SystemEnvironment: ").append(getSystemEnvironment()).append(", ");
         sb.append("SystemProperties: ").append(getSystemProperties()).append(", ");
-        sb.append("VarOne: ").append(getVarOne());
+        sb.append("VarOne: ").append(getVarOne()).append(", ");
+        sb.append("Version: ").append(getVersion());
         return sb.toString();
     }
     

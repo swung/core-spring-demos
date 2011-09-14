@@ -4,7 +4,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-	<bean id="exampleServiceToo" class="com.gordondickens.sample.ExampleServiceToo"
-		init-method="imInit" />
 
+	<bean id="exampleServiceToo" class="com.gordondickens.sample.ExampleServiceToo"/>
+
+
+<!-- 	<bean id="exampleServiceToo" class="com.gordondickens.sample.ExampleServiceToo"
+		init-method="imInit" />
+ -->
 </beans>

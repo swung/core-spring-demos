@@ -5,45 +5,69 @@
 	<groupId>com.gordondickens.spelsample</groupId>
 	<artifactId>spelsample</artifactId>
 	<packaging>war</packaging>
-	<version>0.1.0.BUILD-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>spelsample</name>
 
 	<properties>
 		<roo.version>1.1.5.RELEASE</roo.version>
-
 		<aspectj.version>1.6.11</aspectj.version>
-
-		<cglib.version>2.2</cglib.version>
-		<commons.codec.version>1.4</commons.codec.version>
+		<cglib.version>2.2.2</cglib.version>
+		<commons.beanutils.version>1.8.3</commons.beanutils.version>
+		<commons.codec.version>1.5</commons.codec.version>
 		<commons.collections.version>3.2.1</commons.collections.version>
-		<commons.digester.version>2.1</commons.digester.version>
 		<commons.dbcp.version>1.4</commons.dbcp.version>
+		<commons.digester.version>2.1</commons.digester.version>
 		<commons.fileupload.version>1.2.2</commons.fileupload.version>
+		<commons.httpclient.version>3.1</commons.httpclient.version>
 		<commons.io.version>2.0.1</commons.io.version>
 		<commons.lang.version>2.6</commons.lang.version>
-		<commons.logging.version>1.1.1</commons.logging.version>
-		<commons.net.version>2.2</commons.net.version>
+		<commons.net.version>3.0.1</commons.net.version>
 		<commons.pool.version>1.5.6</commons.pool.version>
+		<hibernate.annotations.version>3.5.6-Final</hibernate.annotations.version>
 		<hibernate.jmx.version>3.5.6-Final</hibernate.jmx.version>
-		<hibernate.jpa.version>1.0.0.Final</hibernate.jpa.version>
-		<hibernate.validator.version>4.0.2.GA</hibernate.validator.version>
-		<hibernate.version>3.6.1.Final</hibernate.version>
-		<hsqldb.version>2.0.0</hsqldb.version>
+		<hibernate.jpa.version>1.0.1.Final</hibernate.jpa.version>
+		<hibernate.validator.version>4.2.0.Final</hibernate.validator.version>
+		<hibernate.version>3.6.7.Final</hibernate.version>
+		<hsqldb.version>2.2.4</hsqldb.version>
+		<jackson.version>1.8.5</jackson.version>
+		<java.version>1.6</java.version>
 		<java.el.version>1.0</java.el.version>
 		<jstl.version>1.2</jstl.version>
-		<junit.version>4.8.2</junit.version>
+		<junit.version>4.9</junit.version>
 		<jodatime.version>1.6.2</jodatime.version>
 		<jta.version>1.1</jta.version>
 		<logback.version>0.9.29</logback.version>
+		<maven.aspectj.plugin>1.2</maven.aspectj.plugin>
+		<maven.assembly.plugin>2.2.1</maven.assembly.plugin>
+		<maven.clean.plugin>2.4.1</maven.clean.plugin>
+		<maven.compiler.plugin>2.3.2</maven.compiler.plugin>
+		<maven.dependency.plugin>2.3</maven.dependency.plugin>
+		<maven.deploy.plugin>2.6</maven.deploy.plugin>
+		<maven.eclipse.plugin>2.7</maven.eclipse.plugin>
+		<maven.enforcer.plugin>1.0.1</maven.enforcer.plugin>
+		<maven.idea.plugin>2.2</maven.idea.plugin>
+		<maven.jar.plugin>2.3.1</maven.jar.plugin>
+		<maven.release.plugin>2.2.1</maven.release.plugin>
+		<maven.resources.plugin>2.5</maven.resources.plugin>
+		<maven.source.plugin>2.1.2</maven.source.plugin>
+		<maven.surefire.plugin>2.9</maven.surefire.plugin>
+		<maven.version.range>[2.2.1,3.1.0)</maven.version.range>
+		<maven.tomcat.plugin>1.1</maven.tomcat.plugin>
+		<maven.jetty.plugin>8.0.0.M2</maven.jetty.plugin>
+		<maven.war.plugin>2.1.1</maven.war.plugin>
 		<mockito.version>1.8.5</mockito.version>
 		<servlet.version>2.5</servlet.version>
-		<slf4j.version>1.6.1</slf4j.version>
-		<spring.version>3.0.5.RELEASE</spring.version>
+		<slf4j.version>1.6.2</slf4j.version>
+		<spring.version>3.1.0.M2</spring.version>
 		<spring.security.version>3.0.5.RELEASE</spring.security.version>
 		<spring.webflow.version>2.3.0.RELEASE</spring.webflow.version>
 		<tiles.version>2.2.2</tiles.version>
 		<tuckey.version>3.1.0</tuckey.version>
 		<validation.version>1.0.0.GA</validation.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.test.failure.ignore>false</maven.test.failure.ignore>
+		<maven.test.skip>false</maven.test.skip>
+
 	</properties>
 	<repositories>
 		<repository>
@@ -87,16 +111,13 @@
 
 
 	<dependencies>
-
-
 		<!-- General dependencies for standard applications -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.8.2</version>
+			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
@@ -197,17 +218,17 @@
 		<dependency>
 			<groupId>org.hsqldb</groupId>
 			<artifactId>hsqldb</artifactId>
-			<version>1.8.0.10</version>
+			<version>${hsqldb.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>3.6.1.Final</version>
+			<version>${hibernate.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>3.6.1.Final</version>
+			<version>${hibernate.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>cglib</groupId>
@@ -222,12 +243,12 @@
 		<dependency>
 			<groupId>org.hibernate.javax.persistence</groupId>
 			<artifactId>hibernate-jpa-2.0-api</artifactId>
-			<version>1.0.0.Final</version>
+			<version>${hibernate.jpa.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
-			<version>4.1.0.Final</version>
+			<version>${hibernate.validator.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>javax.xml.bind</groupId>
@@ -247,7 +268,7 @@
 		<dependency>
 			<groupId>cglib</groupId>
 			<artifactId>cglib-nodep</artifactId>
-			<version>2.2</version>
+			<version>${cglib.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.transaction</groupId>
@@ -267,7 +288,7 @@
 		<dependency>
 			<groupId>commons-pool</groupId>
 			<artifactId>commons-pool</artifactId>
-			<version>1.5.6</version>
+			<version>${commons.pool.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>commons-logging</groupId>
@@ -278,7 +299,7 @@
 		<dependency>
 			<groupId>commons-dbcp</groupId>
 			<artifactId>commons-dbcp</artifactId>
-			<version>1.4</version>
+			<version>${commons.dbcp.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>commons-logging</groupId>
@@ -327,12 +348,12 @@
 		<dependency>
 			<groupId>org.springframework.webflow</groupId>
 			<artifactId>spring-js-resources</artifactId>
-			<version>2.3.0.RELEASE</version>
+			<version>${spring.webflow.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-digester</groupId>
 			<artifactId>commons-digester</artifactId>
-			<version>2.1</version>
+			<version>${commons.digester.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>commons-logging</groupId>
@@ -343,7 +364,7 @@
 		<dependency>
 			<groupId>commons-fileupload</groupId>
 			<artifactId>commons-fileupload</artifactId>
-			<version>1.2.2</version>
+			<version>${commons.fileupload.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>commons-logging</groupId>
@@ -365,7 +386,7 @@
 		<dependency>
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time</artifactId>
-			<version>1.6</version>
+			<version>${jodatime.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
@@ -376,12 +397,12 @@
 		<dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
-			<version>1.4</version>
+			<version>${commons.codec.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.tiles</groupId>
 			<artifactId>tiles-core</artifactId>
-			<version>2.2.2</version>
+			<version>${tiles.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>commons-logging</groupId>
@@ -392,7 +413,7 @@
 		<dependency>
 			<groupId>org.apache.tiles</groupId>
 			<artifactId>tiles-jsp</artifactId>
-			<version>2.2.2</version>
+			<version>${tiles.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>rome</groupId>
@@ -402,7 +423,7 @@
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
-			<version>1.7.4</version>
+			<version>${jackson.version}</version>
 		</dependency>
 	</dependencies>
 
@@ -411,26 +432,23 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>2.1.1</version>
-				<!-- <configuration> <webXml>target/web.xml</webXml> </configuration> -->
+				<version>${maven.war.plugin}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>${maven.compiler.plugin}</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
-					<encoding>UTF-8</encoding>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>${project.build.sourceEncoding}project.build.sourceEncoding</encoding>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>aspectj-maven-plugin</artifactId>
-				<version>1.2</version> <!-- NB: do use 1.3 or 1.3.x due to MASPECTJ-90 - wait for 1.4 -->
+				<version>${maven.aspectj.plugin}</version>
 				<dependencies>
-					<!-- NB: You must use Maven 2.0.9 or above or these are ignored (see
-						MNG-2972) -->
 					<dependency>
 						<groupId>org.aspectj</groupId>
 						<artifactId>aspectjrt</artifactId>
@@ -458,22 +476,22 @@
 							<artifactId>spring-aspects</artifactId>
 						</aspectLibrary>
 					</aspectLibraries>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
-				<version>2.5</version>
+				<version>${maven.resources.plugin}</version>
 				<configuration>
-					<encoding>UTF-8</encoding>
+					<encoding>${project.build.sourceEncoding}project.build.sourceEncoding</encoding>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.7.2</version>
+				<version>${maven.surefire.plugin}</version>
 				<configuration>
 					<printSummary>false</printSummary>
 					<excludes>
@@ -484,7 +502,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
-				<version>2.2.1</version>
+				<version>${maven.assembly.plugin}</version>
 				<configuration>
 					<descriptorRefs>
 						<descriptorRef>jar-with-dependencies</descriptorRef>
@@ -494,16 +512,16 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-deploy-plugin</artifactId>
-				<version>2.5</version>
+				<version>${maven.deploy.plugin}</version>
 			</plugin>
 			<!-- IDE -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.7</version>  <!-- Note 2.8 does not work with AspectJ aspect path -->
+				<version>${maven.eclipse.plugin}</version>
 				<configuration>
 					<downloadSources>true</downloadSources>
-					<downloadJavadocs>false</downloadJavadocs>
+					<downloadJavadocs>true</downloadJavadocs>
 					<wtpversion>2.0</wtpversion>
 					<additionalBuildcommands>
 						<buildCommand>
@@ -526,7 +544,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-idea-plugin</artifactId>
-				<version>2.2</version>
+				<version>${maven.idea.plugin}</version>
 				<configuration>
 					<downloadSources>true</downloadSources>
 					<dependenciesAsLibraries>true</dependenciesAsLibraries>
@@ -535,12 +553,12 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>tomcat-maven-plugin</artifactId>
-				<version>1.1</version>
+				<version>${maven.tomcat.plugin}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.mortbay.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
-				<version>7.3.0.v20110203</version>
+				<version>${maven.jetty.plugin}</version>
 				<configuration>
 					<webAppConfig>
 						<contextPath>/${project.name}</contextPath>

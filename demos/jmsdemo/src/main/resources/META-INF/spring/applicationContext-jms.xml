@@ -2,7 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:amq="http://activemq.apache.org/schema/core" xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:jms="http://www.springframework.org/schema/jms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd                http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd                http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core-5.2.0.xsd   http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms-3.0.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd                http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd                http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core-5.2.0.xsd   http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms-3.0.xsd">
 
 	<!--
 		Embedded ActiveMQ Broker
@@ -14,7 +14,7 @@
 		</amq:transportConnectors>
 	</amq:broker>
 
-	<!-- JMS ConnectionFactory to use, configuring the embedded broker using 
+	<!-- JMS ConnectionFactory to use, configuring the embedded broker using
 		XML -->
 	<amq:connectionFactory brokerURL="vm://localhost"
 		id="jmsFactory" />
@@ -33,7 +33,7 @@
 	</bean>
 
 	<amq:queue id="myDestination" physicalName="myDestination" />
-	
+
 	<jms:listener-container connection-factory="jmsFactory"
 		destination-type="queue" />
 </beans>

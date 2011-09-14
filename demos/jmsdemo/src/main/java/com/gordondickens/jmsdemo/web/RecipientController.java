@@ -1,19 +1,10 @@
 package com.gordondickens.jmsdemo.web;
 
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.List;
-
-import javax.jms.JMSException;
-import javax.jms.Message;
-import javax.jms.QueueBrowser;
-import javax.jms.Session;
 import javax.validation.Valid;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jms.core.BrowserCallback;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.roo.addon.web.mvc.controller.RooWebScaffold;
 import org.springframework.stereotype.Controller;
@@ -59,32 +50,32 @@ public class RecipientController {
 	@RequestMapping(params = "showjms", method = RequestMethod.GET)
 	public String showJms(ModelMap modelMap) {
 		jmsTemplate.setReceiveTimeout(JmsTemplate.RECEIVE_TIMEOUT_NO_WAIT);
-//		jmsTemplate.setReceiveTimeout(5000);
+		// jmsTemplate.setReceiveTimeout(5000);
 		String msg = (String) jmsTemplate
 				.receiveAndConvert("queue.new.recipient");
 		log.debug("*******  Received Message '" + msg + "' from Queue.");
 		if (!StringUtils.hasText(msg)) {
 			msg = "NO MESSAGE IN QUEUE!";
 		}
-//		List<String> msgs = jmsTemplate.browse (
-//			new BrowserCallback<List<String>>() {
-//				public List<String> doInJms(Session session, QueueBrowser queueBrowser) throws JMSException {
-//					Enumeration<Message> e = queueBrowser.getEnumeration();
-//					List<String> list = new ArrayList<String>();
-//					while (e.hasMoreElements()) {
-//						Message message = e.nextElement();
-//						String m = message.toString();
-//						list.add(m);
-//						log.debug("***** BROWSED MSG: '" + m + "'");
-//						
-//					}
-//                	log.debug("***** Returning List: " + list);
-//                	return list;
-//				}
-//			}
-//		);
-		
-		
+		// List<String> msgs = jmsTemplate.browse (
+		// new BrowserCallback<List<String>>() {
+		// public List<String> doInJms(Session session, QueueBrowser
+		// queueBrowser) throws JMSException {
+		// Enumeration<Message> e = queueBrowser.getEnumeration();
+		// List<String> list = new ArrayList<String>();
+		// while (e.hasMoreElements()) {
+		// Message message = e.nextElement();
+		// String m = message.toString();
+		// list.add(m);
+		// log.debug("***** BROWSED MSG: '" + m + "'");
+		//
+		// }
+		// log.debug("***** Returning List: " + list);
+		// return list;
+		// }
+		// }
+		// );
+
 		modelMap.addAttribute("messagecontent", msg);
 		return "recipients/showjms";
 	}

@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.springframework.samples.spring</groupId>
 	<artifactId>core-spring-demos</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<packaging>jar</packaging>
 	<name>Core Spring Demos</name>
 	<url>http://www.gordondickens.com</url>
@@ -13,28 +13,37 @@
 		<aspectj.version>1.6.11</aspectj.version>
 		<java.version>1.6</java.version>
 		<java.version.range>[1.6,)</java.version.range>
-		<junit.version>4.8.2</junit.version>
+		<junit.version>4.9</junit.version>
 		<logback.version>0.9.29</logback.version>
+		<maven.ant.plugin>1.6</maven.ant.plugin>
+		<maven.aspectj.plugin>1.3.1</maven.aspectj.plugin>
 		<maven.assembly.plugin>2.2.1</maven.assembly.plugin>
+		<maven.build.helper.plugin>1.7</maven.build.helper.plugin>
 		<maven.clean.plugin>2.4.1</maven.clean.plugin>
 		<maven.compiler.plugin>2.3.2</maven.compiler.plugin>
-		<maven.dependency.plugin>2.1</maven.dependency.plugin>
+		<maven.dependency.plugin>2.3</maven.dependency.plugin>
+		<maven.deploy.plugin>2.6</maven.deploy.plugin>
 		<maven.eclipse.plugin>2.8</maven.eclipse.plugin>
-		<maven.enforcer.plugin>1.0</maven.enforcer.plugin>
+		<maven.enforcer.plugin>1.0.1</maven.enforcer.plugin>
 		<maven.exec.plugin>1.2</maven.exec.plugin>
+		<maven.failsafe.plugin>2.9</maven.failsafe.plugin>
 		<maven.idea.plugin>2.2</maven.idea.plugin>
 		<maven.jar.plugin>2.3.1</maven.jar.plugin>
-		<maven.resources.plugin>2.4.3</maven.resources.plugin>
+		<maven.release.plugin>2.2.1</maven.release.plugin>
+		<maven.resources.plugin>2.5</maven.resources.plugin>
+		<maven.sonar.plugin>2.10</maven.sonar.plugin>
 		<maven.source.plugin>2.1.2</maven.source.plugin>
-		<maven.surefire.plugin>2.7.1</maven.surefire.plugin>
-		<maven.test.failure.ignore>true</maven.test.failure.ignore>
+		<maven.surefire.plugin>2.9</maven.surefire.plugin>
 		<maven.version.range>[2.2.1,3.1.0)</maven.version.range>
+		<maven.tomcat.plugin>1.1</maven.tomcat.plugin>
+		<maven.jetty.plugin>8.0.0.M2</maven.jetty.plugin>
+		<maven.versions.plugin>1.2</maven.versions.plugin>
+		<maven.war.plugin>2.1.1</maven.war.plugin>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<slf4j.version>1.6.1</slf4j.version>
 		<spring.version>3.1.0.BUILD-SNAPSHOT</spring.version>
- <!-- 		<spring.version>3.0.5.RELEASE</spring.version>
- -->
- 		<wtp.version>2.0</wtp.version>
+		<!-- <spring.version>3.0.6.RELEASE</spring.version> -->
+		<wtp.version>2.0</wtp.version>
 	</properties>
 	<developers>
 		<developer>
@@ -50,17 +59,15 @@
 	<description>Sample App for Days 1 &amp; 2 of Core Spring 3</description>
 
 	<dependencies>
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${spring.version}</version>
 			<scope>test</scope>
 		</dependency>
-<!-- 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context-support</artifactId>
-			<version>${spring.version}</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>org.springframework</groupId> <artifactId>spring-context-support</artifactId>
+			<version>${spring.version}</version> </dependency> -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -262,8 +269,9 @@
 							<rules>
 								<bannedDependencies>
 									<excludes>
-										<exclude>commons-logging:commons-logging</exclude>
+										<exclude>commons-logging</exclude>
 										<exclude>log4j:log4j</exclude>
+										<exclude>org.slf4j*:1.5*</exclude>
 									</excludes>
 								</bannedDependencies>
 								<requireMavenVersion>
