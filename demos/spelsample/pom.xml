@@ -10,7 +10,7 @@
 
 	<properties>
 		<roo.version>1.1.5.RELEASE</roo.version>
-		<aspectj.version>1.6.11</aspectj.version>
+		<aspectj.version>1.6.12.M2</aspectj.version>
 		<cglib.version>2.2.2</cglib.version>
 		<commons.beanutils.version>1.8.3</commons.beanutils.version>
 		<commons.codec.version>1.5</commons.codec.version>
@@ -36,7 +36,7 @@
 		<junit.version>4.9</junit.version>
 		<jodatime.version>1.6.2</jodatime.version>
 		<jta.version>1.1</jta.version>
-		<logback.version>0.9.29</logback.version>
+		<logback.version>0.9.30</logback.version>
 		<maven.aspectj.plugin>1.2</maven.aspectj.plugin>
 		<maven.assembly.plugin>2.2.1</maven.assembly.plugin>
 		<maven.clean.plugin>2.4.1</maven.clean.plugin>
