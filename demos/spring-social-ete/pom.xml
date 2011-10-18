@@ -16,7 +16,7 @@
 		<commons.codec.version>1.4</commons.codec.version>
 		<commons.collections.version>3.2.1</commons.collections.version>
 		<commons.dbcp.version>1.4</commons.dbcp.version>
-		<commons.io.version>2.0.1</commons.io.version>
+		<commons.io.version>2.1</commons.io.version>
 		<commons.lang.version>2.5</commons.lang.version>
 		<commons.net.version>3.0</commons.net.version>
 		<ecj.version>3.5.1</ecj.version>
@@ -44,7 +44,7 @@
 		<maven.tomcat.plugin>1.1</maven.tomcat.plugin>
 		<maven.jetty.plugin>8.0.1.v20110908</maven.jetty.plugin>
 		<rome.version>1.0</rome.version>
-		<slf4j.version>1.6.2</slf4j.version>
+		<slf4j.version>1.6.3</slf4j.version>
 		<spring.mobile.version>1.0.0.M3</spring.mobile.version>
 		<spring.social.version>1.0.0.BUILD-SNAPSHOT</spring.social.version>
 		<spring.security.version>3.1.0.CI-SNAPSHOT</spring.security.version>

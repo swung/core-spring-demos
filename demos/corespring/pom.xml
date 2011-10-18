@@ -40,9 +40,9 @@
 		<maven.versions.plugin>1.2</maven.versions.plugin>
 		<maven.war.plugin>2.1.1</maven.war.plugin>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<slf4j.version>1.6.2</slf4j.version>
+		<slf4j.version>1.6.3</slf4j.version>
 		<spring.version>3.1.0.BUILD-SNAPSHOT</spring.version>
-		<!-- <spring.version>3.0.6.RELEASE</spring.version> -->
+		<!-- <spring.version>3.1.0.RC1</spring.version> -->
 		<wtp.version>2.0</wtp.version>
 	</properties>
 	<developers>

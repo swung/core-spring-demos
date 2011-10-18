@@ -24,7 +24,7 @@
 
     <properties>
         <activation.version>1.1.1</activation.version>
-        <activemq.version>5.5.0</activemq.version>
+        <activemq.version>5.5.1</activemq.version>
         <cglib.version>2.2.2</cglib.version>
         <commons.codec.version>1.4</commons.codec.version>
         <commons.lang.version>2.5</commons.lang.version>
@@ -63,10 +63,10 @@
         <maven.versions.plugin>1.2</maven.versions.plugin>
         <maven.war.plugin>2.1.1</maven.war.plugin>
 
-        <slf4j.version>1.6.2</slf4j.version>
+        <slf4j.version>1.6.3</slf4j.version>
         <spring.integration.version>2.0.5.RELEASE</spring.integration.version>
         <!--<spring.security.version>3.1.0.RC1</spring.security.version> -->
-        <spring.version>3.0.6.RELEASE</spring.version>
+        <spring.version>3.1.0.RC1</spring.version>
         <!-- <spring.version>3.1.0.M1</spring.version> -->
         <xbean.version>3.8</xbean.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

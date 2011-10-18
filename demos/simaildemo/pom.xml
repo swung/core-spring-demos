@@ -20,12 +20,12 @@
 		<commons.digester.version>2.1</commons.digester.version>
 		<commons.fileupload.version>1.2.2</commons.fileupload.version>
 		<commons.httpclient.version>3.1</commons.httpclient.version>
-		<commons.io.version>2.0.1</commons.io.version>
+		<commons.io.version>2.1</commons.io.version>
 		<commons.lang.version>2.6</commons.lang.version>
 		<commons.net.version>3.0.1</commons.net.version>
 		<commons.pool.version>1.5.6</commons.pool.version>
 		<derby.version>10.8.1.2</derby.version>
-		<ehcache.version>2.4.5</ehcache.version>
+		<ehcache.version>2.4.6</ehcache.version>
 		<hibernate.annotations.version>3.5.6-Final</hibernate.annotations.version>
 		<hibernate.jmx.version>3.5.6-Final</hibernate.jmx.version>
 		<hibernate.jpa.version>1.0.1.Final</hibernate.jpa.version>
@@ -69,7 +69,7 @@
 
 		<mockito.version>1.9.0-rc1</mockito.version>
 		<roo.version>1.2.0.M1</roo.version>
-		<slf4j.version>1.6.2</slf4j.version>
+		<slf4j.version>1.6.3</slf4j.version>
 		<servlet.version>2.5</servlet.version>
 		<spring.data.jpa.version>1.0.1.RELEASE</spring.data.jpa.version>
 		<spring.integration.version>2.1.0.BUILD-SNAPSHOT</spring.integration.version>

@@ -31,13 +31,13 @@
         <commons.digester.version>2.1</commons.digester.version>
         <commons.fileupload.version>1.2.2</commons.fileupload.version>
         <commons.httpclient.version>3.1</commons.httpclient.version>
-        <commons.io.version>2.0.1</commons.io.version>
+        <commons.io.version>2.1</commons.io.version>
         <commons.lang.version>2.6</commons.lang.version>
         <commons.net.version>3.0.1</commons.net.version>
         <commons.pool.version>1.5.6</commons.pool.version>
         <derby.version>10.8.1.2</derby.version>
         <easymock.version>3.0</easymock.version>
-        <ehcache.version>2.4.5</ehcache.version>
+        <ehcache.version>2.4.6</ehcache.version>
         <el-api.version>1.0</el-api.version>
         <hibernate.annotations.version>3.5.6-Final</hibernate.annotations.version>
         <hibernate.jmx.version>3.5.6-Final</hibernate.jmx.version>
@@ -81,8 +81,8 @@
 
         <roo.version>1.1.5.RELEASE</roo.version>
         <servlet.version>2.5</servlet.version>
-        <slf4j.version>1.6.2</slf4j.version>
-        <spring.version>3.0.6.RELEASE</spring.version>
+        <slf4j.version>1.6.3</slf4j.version>
+        <spring.version>3.1.0.RC1</spring.version>
         <spring.webflow.version>2.3.0.RELEASE</spring.webflow.version>
         <tiles.version>2.2.2</tiles.version>
         <urlrewrite.version>3.1.0</urlrewrite.version>
