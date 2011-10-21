@@ -6,6 +6,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.junit.Assert.assertEquals;
 import static org.powermock.api.mockito.PowerMockito.*;
@@ -14,11 +16,13 @@ import static org.powermock.api.mockito.PowerMockito.*;
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(IdGenerator.class)
 public class MyBeanTest {
+    private static final Logger logger = LoggerFactory.getLogger(MyBeanTest.class);
 
     private MyBean myBean;
 
     @Before
     public void setUp() {
+        logger.debug("PowerMock test with Mockito on Final class with Static Method");
         myBean = new MyBean();
     }
 

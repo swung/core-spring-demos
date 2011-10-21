@@ -5,7 +5,7 @@
     <groupId>com.gordo.itemmanager</groupId>
     <artifactId>mockitodemo</artifactId>
     <packaging>war</packaging>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>mockitodemo</name>
 
     <properties>

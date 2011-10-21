@@ -1,16 +1,8 @@
 package com.gordondickens.itemmanager.controller;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.assertTrue;
-import static org.mockito.Matchers.anyLong;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
-
-import java.util.ArrayList;
-import java.util.List;
-
+import com.gordondickens.itemmanager.entity.Item;
+import com.gordondickens.itemmanager.exception.ItemNotFoundException;
+import com.gordondickens.itemmanager.service.internal.ItemService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,9 +10,12 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.ui.ModelMap;
 
-import com.gordondickens.itemmanager.entity.Item;
-import com.gordondickens.itemmanager.exception.ItemNotFoundException;
-import com.gordondickens.itemmanager.service.internal.ItemService;
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.junit.Assert.*;
+import static org.mockito.Matchers.anyLong;
+import static org.mockito.Mockito.*;
 
 //NOTE: Do NOT annotate with Context Configuration - we are mocking seams (layer boundaries)
 @RunWith(MockitoJUnitRunner.class)
@@ -41,8 +36,8 @@ public class ItemControllerTest {
 	@Test
 	public void testViewItem() throws Exception {
 		Item item = new Item();
-		item.setId(1l);
-		item.setName("Item 1");
+		item.setId(123L);
+		item.setName("Item 123");
 		// when() Creates a dynamic stub
 		// If real method invocation is desired, use spy
 		when(itemService.getItem(item.getId())).thenReturn(item);
@@ -51,6 +46,7 @@ public class ItemControllerTest {
 
 		assertEquals(item, modelMap.get("item"));
 		assertEquals("item/show", view);
+        verify(itemService).getItem(123L);
 		// TODO: Add behavior test
 		// Note: verifying stubs (@Mock & when()) is redundant, to verify actual
 		// behavior,
@@ -59,23 +55,22 @@ public class ItemControllerTest {
 
 	@Test
 	public void testViewItemWithItemNotFoundException() throws Exception {
-		ItemNotFoundException exception = new ItemNotFoundException(5);
-		when(itemService.getItem(5l)).thenThrow(exception);
+		ItemNotFoundException exception = new ItemNotFoundException(999);
+		when(itemService.getItem(999L)).thenThrow(exception);
 
-		String view = itemController.show(5l, modelMap);
+		String view = itemController.show(999L, modelMap);
 
 		assertEquals("redirect:/errorView", view);
 		assertSame(exception, modelMap.get("exception"));
-		// TODO: Add behavior test
+        verify(itemService).getItem(999L);
 	}
 
 	@Test
 	public void testDeleteItem() throws Exception {
-		String view = itemController.delete(5l, null, null);
+		String view = itemController.delete(555L, null, null);
 
-		verify(itemService).deleteItem(5l);
+		verify(itemService).deleteItem(555L);
 		assertTrue(view.startsWith("redirect:/item?page="));
-		// TODO: Add behavior test
 	}
 
 	/**
@@ -87,9 +82,9 @@ public class ItemControllerTest {
 	@Test
 	public void testMultipleDeletesOccur() throws Exception {
 		List<Long> testIds = new ArrayList<Long>();
-		testIds.add(1L);
-		testIds.add(300L);
-		testIds.add(77L);
+		testIds.add(1234L);
+		testIds.add(3006L);
+		testIds.add(7707L);
 		String view = itemController.deleteItems(testIds);
 
 		verify(itemService, times(testIds.size())).deleteItem(anyLong());
