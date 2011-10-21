@@ -1,7 +1,7 @@
-package com.gordo.itemmanager.service.internal;
+package com.gordondickens.itemmanager.service.internal;
 
-import com.gordo.itemmanager.entity.Item;
-import com.gordo.itemmanager.exception.ItemNotFoundException;
+import com.gordondickens.itemmanager.entity.Item;
+import com.gordondickens.itemmanager.exception.ItemNotFoundException;
 
 public interface ItemService {
 	// Going to mock this so we do NOT have to create any implementation classes

@@ -1,4 +1,4 @@
-package com.gordo.itemmanager.entity;
+package com.gordondickens.itemmanager.entity;
 
 import java.util.List;
 

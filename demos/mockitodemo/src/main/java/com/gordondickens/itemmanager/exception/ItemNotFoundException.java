@@ -1,4 +1,4 @@
-package com.gordo.itemmanager.exception;
+package com.gordondickens.itemmanager.exception;
 
 public class ItemNotFoundException extends Exception {
 

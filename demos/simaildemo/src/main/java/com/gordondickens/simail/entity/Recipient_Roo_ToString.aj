@@ -9,11 +9,9 @@ privileged aspect Recipient_Roo_ToString {
     
     public String Recipient.toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Id: ").append(getId()).append(", ");
         sb.append("MessageBody: ").append(getMessageBody()).append(", ");
         sb.append("RecipientEmail: ").append(getRecipientEmail()).append(", ");
-        sb.append("Subject: ").append(getSubject()).append(", ");
-        sb.append("Version: ").append(getVersion());
+        sb.append("Subject: ").append(getSubject());
         return sb.toString();
     }
     

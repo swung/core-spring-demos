@@ -48,7 +48,7 @@
 		to
 		dependency inject an object into your class.
 	-->
-	<context:component-scan base-package="com.gordo.itemmanager">
+	<context:component-scan base-package="com.gordondickens.itemmanager">
 		<context:exclude-filter expression="org.springframework.stereotype.Controller"
 			type="annotation" />
 	</context:component-scan>

@@ -1,4 +1,4 @@
-package com.gordo.itemmanager.controller;
+package com.gordondickens.itemmanager.controller;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
@@ -18,9 +18,9 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.ui.ModelMap;
 
-import com.gordo.itemmanager.entity.Item;
-import com.gordo.itemmanager.exception.ItemNotFoundException;
-import com.gordo.itemmanager.service.internal.ItemService;
+import com.gordondickens.itemmanager.entity.Item;
+import com.gordondickens.itemmanager.exception.ItemNotFoundException;
+import com.gordondickens.itemmanager.service.internal.ItemService;
 
 //NOTE: Do NOT annotate with Context Configuration - we are mocking seams (layer boundaries)
 @RunWith(MockitoJUnitRunner.class)
